@@ -13,10 +13,6 @@ public class Smiley extends JLabel {
 	public static final String GREEN = "green";
 	public static final String BLUE = "blue";
 	public static String color = BLUE;
-	JFrame frame = new JFrame();
-	frame.JFrame.EXIT_ON_CLOSE
-	JPanel panel = new JPanel();
-	frame.add(panel)
 	
 	Smiley(){
 		super(loadIcon("_01_static_smiley_blues/smiley_"+ color +".jpg"));
