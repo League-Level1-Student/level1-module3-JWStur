@@ -1,5 +1,6 @@
 package _03_jars._1_intro_to_jars;
 
+import org.jointheleague.graphical.robot.Robot;
 
 public class RobotInAJar {
 	
@@ -58,7 +59,8 @@ public class RobotInAJar {
 	
 	public void draw() {
 		/*** Write code to make your robot draw a shape here ****/
-		
+		String name = "Jack";
+		Robot bot = new Robot();
 		
 	}
 }

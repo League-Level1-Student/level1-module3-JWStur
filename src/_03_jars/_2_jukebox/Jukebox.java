@@ -5,6 +5,7 @@ package _03_jars._2_jukebox;
  */
 
 
+import java.awt.Frame;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -12,7 +13,10 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
 import javazoom.jl.player.advanced.AdvancedPlayer;
@@ -21,9 +25,16 @@ import javazoom.jl.player.advanced.AdvancedPlayer;
  *   Right click your project and add it as a JAR (Under Java Build Path > Libraries).*/
 
 public class Jukebox implements Runnable {
-
-    public void run() {
-
+	
+	JFrame frame = new JFrame();
+    JPanel panel = new JPanel();
+    JButton pause = new JButton();
+    JButton play = new JButton();
+	JButton forward = new JButton();
+	JButton back = new JButton();
+    
+	public void run() {
+    	
 		// 1. Find an mp3 on your computer or on the Internet.
 		// 2. Create a Song object for that mp3
 
@@ -36,6 +47,13 @@ public class Jukebox implements Runnable {
 		 * cover is clicked, stop the currently playing song, and play the one
 		 * that was selected.
 		 */
+		frame.setVisible(true);
+		panel.add(play);
+		panel.add(pause);
+		panel.add(forward);
+		panel.add(back);
+		frame.add(panel);
+		frame.pack();
     }
     
     
